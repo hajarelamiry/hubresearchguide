@@ -1,0 +1,11 @@
+<svg width="100%" viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="680" height="460" fill="#f9f8f5" style="fill:rgb(249, 248, 245);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- G orange — derrière -->
+  <text x="245" y="365" font-family="Georgia, 'Times New Roman', Times, serif" font-size="310" font-weight="700" font-style="normal" fill="#C85520" style="fill:rgb(200, 85, 32);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, Times, serif;font-size:310px;font-weight:700;text-anchor:start;dominant-baseline:auto">G</text>
+
+  <!-- R navy — devant -->
+  <text x="58" y="365" font-family="Georgia, 'Times New Roman', Times, serif" font-size="310" font-weight="700" font-style="normal" fill="#1B2A4A" style="fill:rgb(27, 42, 74);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, Times, serif;font-size:310px;font-weight:700;text-anchor:start;dominant-baseline:auto">R</text>
+
+</svg>
