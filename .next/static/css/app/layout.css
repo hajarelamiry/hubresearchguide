@@ -864,14 +864,11 @@ p {
 .mt-4{
   margin-top: 1rem;
 }
-.mt-6{
-  margin-top: 1.5rem;
+.mt-5{
+  margin-top: 1.25rem;
 }
 .mt-auto{
   margin-top: auto;
-}
-.mt-5{
-  margin-top: 1.25rem;
 }
 .block{
   display: block;
@@ -903,6 +900,9 @@ p {
 .size-4{
   width: 1rem;
   height: 1rem;
+}
+.h-1{
+  height: 0.25rem;
 }
 .h-1\.5{
   height: 0.375rem;
@@ -978,9 +978,6 @@ p {
 }
 .h-svh{
   height: 100svh;
-}
-.h-1{
-  height: 0.25rem;
 }
 .max-h-96{
   max-height: 24rem;
@@ -1415,6 +1412,13 @@ p {
 .border-primary{
   border-color: hsl(var(--primary));
 }
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
+}
+.border-red-500\/30{
+  border-color: rgb(239 68 68 / 0.3);
+}
 .border-secondary{
   border-color: hsl(var(--secondary));
 }
@@ -1429,13 +1433,6 @@ p {
 }
 .border-white\/15{
   border-color: rgb(255 255 255 / 0.15);
-}
-.border-red-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
-}
-.border-red-500\/30{
-  border-color: rgb(239 68 68 / 0.3);
 }
 .border-l-transparent{
   border-left-color: transparent;
@@ -1503,6 +1500,13 @@ p {
 .bg-primary\/15{
   background-color: hsl(var(--primary) / 0.15);
 }
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+.bg-red-500\/10{
+  background-color: rgb(239 68 68 / 0.1);
+}
 .bg-secondary{
   background-color: hsl(var(--secondary));
 }
@@ -1520,13 +1524,6 @@ p {
 }
 .bg-white\/10{
   background-color: rgb(255 255 255 / 0.1);
-}
-.bg-red-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
-}
-.bg-red-500\/10{
-  background-color: rgb(239 68 68 / 0.1);
 }
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
@@ -1671,6 +1668,10 @@ p {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-3\.5{
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1678,10 +1679,6 @@ p {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.py-3\.5{
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
 }
 .pb-3{
   padding-bottom: 0.75rem;
@@ -1867,6 +1864,14 @@ p {
 .text-primary-foreground{
   color: hsl(var(--primary-foreground));
 }
+.text-red-400{
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
 .text-secondary{
   color: hsl(var(--secondary));
 }
@@ -1894,14 +1899,6 @@ p {
 }
 .text-white\/80{
   color: rgb(255 255 255 / 0.8);
-}
-.text-red-400{
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
-}
-.text-red-500{
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 .underline{
   text-decoration-line: underline;
@@ -2352,13 +2349,13 @@ p {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-ring:focus{
-  --tw-ring-color: hsl(var(--ring));
-}
-
 .focus\:ring-red-400:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(248 113 113 / var(--tw-ring-opacity, 1));
+}
+
+.focus\:ring-ring:focus{
+  --tw-ring-color: hsl(var(--ring));
 }
 
 .focus\:ring-offset-2:focus{

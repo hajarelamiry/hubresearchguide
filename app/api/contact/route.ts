@@ -39,7 +39,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { profileType, recaptchaToken } = body;
 
-    // ── reCAPTCHA ──────────────────────────────────────────────
     if (!recaptchaToken) {
       return NextResponse.json({ error: "reCAPTCHA manquant" }, { status: 400 });
     }
@@ -58,9 +57,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email invalide" }, { status: 400 });
     }
 
-    // ── Construction email selon profileType ──────────────────
     let subject = "";
     let html = "";
+
+    await fetch(process.env.MAKE_WEBHOOK_URL_CONTACT!, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...body,
+        submitted_at: new Date().toISOString(),
+      }),
+    });
 
     switch (profileType) {
 
@@ -192,8 +199,6 @@ export async function POST(request: NextRequest) {
       default:
         return NextResponse.json({ error: "Profile type invalide" }, { status: 400 });
     }
-
-    // ── Envoi email ───────────────────────────────────────────
     const { error: sendError } = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: process.env.RECIPIENT_EMAIL!,
