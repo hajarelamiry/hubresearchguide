@@ -31,12 +31,8 @@ export default function Footer() {
 
           <p className="flex items-center gap-3">
             <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
-            <a
-              href="tel:+97433837805"
-              className="text-white/80 hover:text-white transition-colors"
-            >
               +974 3383 7805
-            </a>
+            
           </p>
 
           <p className="flex items-center gap-3">
