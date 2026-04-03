@@ -8,6 +8,7 @@ import VisionSection from "@/components/landing/VisionSection";
 import TractionSection from "@/components/landing/TractionSection";
 import OnboardingForm from "@/components/landing/OnboardingForm";
 import Footer from "@/components/landing/Footer";
+import AboutUsSection from "@/components/landing/AboutSection";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <VisionSection />
         <TractionSection />
         <OnboardingForm />
+        <AboutUsSection />
         <Footer />
       </div>
     </div>

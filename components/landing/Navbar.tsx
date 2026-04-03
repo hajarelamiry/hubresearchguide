@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Use Cases", href: "#use-cases" },
   { label: "Vision", href: "#vision" },
   { label: "Traction", href: "#traction" },
+  { label: "About Us", href: "#about" },
 ];
 
 const scrollTo = (id: string) => {

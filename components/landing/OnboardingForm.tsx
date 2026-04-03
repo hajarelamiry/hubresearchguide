@@ -313,7 +313,7 @@ export default function OnboardingForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, source: "LP-Hub" }),
       });
       if (res.ok) {
         setSubmitted(true);

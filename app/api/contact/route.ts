@@ -37,7 +37,7 @@ function buildHtml(title: string, emoji: string, rows: string) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { profileType, recaptchaToken } = body;
+    const { profileType, recaptchaToken, source } = body;
 
     if (!recaptchaToken) {
       return NextResponse.json({ error: "reCAPTCHA manquant" }, { status: 400 });
@@ -50,7 +50,6 @@ export async function POST(request: NextRequest) {
     if (!verifyData.success || verifyData.score < 0.5) {
       return NextResponse.json({ error: "reCAPTCHA invalide" }, { status: 400 });
     }
-    // ── Validation email basique ───────────────────────────────
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const email = e(body.email);
     if (!email || !emailRegex.test(email)) {
@@ -65,6 +64,7 @@ export async function POST(request: NextRequest) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...body,
+        source: source || "LP-Hub-ResearchGuide",
         submitted_at: new Date().toISOString(),
       }),
     });

@@ -43,6 +43,27 @@ export default function VisionSection() {
               </span>
             ))}
           </div>
+
+          {/* Stats */}
+<div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 border-t border-white/10 pt-12">
+  {[
+    { value: "+2000", label: "Experts" },
+    { value: "+100", label: "Universities" },
+    { value: "+50", label: "Companies" },
+  ].map((stat, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.1 }}
+      className="text-center"
+    >
+      <p className="text-4xl font-black text-brand-accent">{stat.value}</p>
+      <p className="text-white/60 mt-1 text-xs uppercase tracking-widest">{stat.label}</p>
+    </motion.div>
+  ))}
+</div>
         </motion.div>
       </div>
     </section>
