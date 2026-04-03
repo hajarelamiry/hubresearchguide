@@ -37,12 +37,9 @@ export default function Footer() {
 
           <p className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-            <a
-              href="mailto:contact@monarkit.qa"
-              className="text-white/80 hover:text-white transition-colors"
-            >
+            
               contact@researchguide.net
-            </a>
+            
           </p>
 
           <p className="text-xs text-white/60 uppercase tracking-widest">Headquarters</p>
