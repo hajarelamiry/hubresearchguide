@@ -7,7 +7,7 @@ export const metadata: Metadata = {
    title: "The AI Platform Connecting Research, Funding and Innovation",
   description:
     "ResearchGuide helps researchers, universities and companies discover funding opportunities, showcase research projects, and connect with experts to turn ideas into real-world innovations.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "../images/favicon.svg" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

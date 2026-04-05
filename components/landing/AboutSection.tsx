@@ -1,19 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
-import { Building2, Lightbulb, Code2, Globe2 } from "lucide-react";
+import Image from "next/image";
 
+const cards = [
+  {
+    iconSrc: "../images/favicon.svg",
+    title: "Connecting Ideas to Experts",
+    description:
+      "ResearchGuide is a platform that connects organizations with vetted researchers, PhDs, and on-demand R&D experts, streamlining the path from idea to innovation. It offers pre-project consulting, dedicated R&D teams, post-project support, and smart matchmaking to ensure the right expertise is applied at every stage. Developed by MONARK IT, ResearchGuide is built to transform complex research processes into a seamless, results-driven experience.",
+    topBar: "bg-gradient-to-r from-orange-400 to-orange-600",
+    iconBg: "bg-orange-50",
+  },
+  {
+    iconSrc: "../images/Favicon MONARK IT WHITE.svg",
+    title: "Behind the Vision",
+    description:
+      "MONARK IT was founded by Dr. Salim El Bouanani, a PhD and seasoned entrepreneur, with a simple but powerful vision: serious innovation requires serious talent. Drawing on his own research background, he set out to connect ambitious projects with the rare professionals who can truly deliver. From early collaborations in Europe and North America to its official launch in Qatar in 2025 and incubation at QSTP in 2026, ResearchGuide has grown into a trusted network of researchers, PhDs, and on-demand experts, turning complexity into measurable impact.",
+    topBar: "bg-gradient-to-r from-violet-800/90 to-indigo-600",
+    iconBg: "bg-violet-800/90",
+  },
+];
 
 export default function AboutUsSection() {
   return (
     <section id="about" className="py-24 bg-muted/50 relative overflow-hidden">
-      {/* Subtle background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-3xl" />
         <div className="absolute bottom-0 -left-24 w-[400px] h-[400px] rounded-full bg-accent/5 blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 max-w-6xl relative">
-        {/* Section label */}
+      <div className="container mx-auto px-6 max-w-screen-2xl relative">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,39 +43,47 @@ export default function AboutUsSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-5">
             Built by Builders Who Believe in Science
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            ResearchGuide is developed by{" "}
-            <span className="text-foreground font-semibold">Monarkit</span>, a
-            software company dedicated to building meaningful digital products
-            that bridge technology and human progress.
-          </p>
         </motion.div>
 
-        {/* Monarkit card */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-card mb-12 flex flex-col md:flex-row gap-8 items-start"
-        >
-          {/* Logo placeholder */}
-          <div className="flex-shrink-0">
-            <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center shadow-sm">
-              <Building2 size={28} className="text-accent-foreground" />
-            </div>
-          </div>
+        {/* 2 Cards côte à côte */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          {cards.map((card, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2, duration: 0.5 }}
+              className="bg-white rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
+            >
+              {/* Barre colorée en haut */}
+              <div className={`h-1.5 w-full ${card.topBar}`} />
 
-          <div>
-            
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Founded by Salim El Bouanani, a PhD and seasoned entrepreneur, MONARK IT was built on a simple observation: serious innovation requires serious talent. Drawing on his own research background, he set out to connect ambitious projects with the rare professionals who can truly deliver. From early partnerships across Europe and North America, to the official establishment of MONARK IT L.L.C in Qatar in 2025 and the incubation of ResearchGuide at QSTP in 2026, the platform has grown into a trusted network of vetted researchers, PhDs, and on-demand experts — transforming complexity into measurable impact.
-            </p>
-            
-          </div>
-        </motion.div>
+              <div className="p-10 md:p-12 flex flex-col flex-1">
+                {/* Icône + Titre sur la même ligne */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-12 h-12 rounded-xl ${card.iconBg} flex items-center justify-center shrink-0`}>
+                    <Image
+                      src={card.iconSrc}
+                      alt={card.title}
+                      width={28}
+                      height={28}
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
+                    {card.title}
+                  </h3>
+                </div>
 
-       
+                {/* Description */}
+                <p className="text-gray-500 text-base leading-relaxed flex-1">
+                  {card.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -48,7 +48,7 @@ export default function Footer() {
 
             <a href="https://maps.app.goo.gl/FvFtdNMDUcdWmsWd6" target="_blank" rel="noopener noreferrer"
                 className="hover:text-orange-500 text-white/80 underline underline-offset-2">
-                Unit 210-88, Floor 2, Tech 2 Building, QSTP, Doha, Qatar
+                Unit 210-88, 2nd Floor, Tech 2 Building, QSTP, Doha - Qatar
             </a>
           </p>
 
@@ -58,14 +58,14 @@ export default function Footer() {
                 <MapPin size={16} className="text-orange-500 shrink-0 mt-0.5" />
                 <a href="https://maps.app.goo.gl/BKYwJ66qBWtWyENg8" target="_blank" rel="noopener noreferrer"
                   className="hover:text-orange-500 text-white/50 underline underline-offset-2">
-                  Office 18, 5th Floor, Bergis Business Center, Boulevard Safi, MARRAKECH
+                  Office 18, 5th Floor, Bergis Business Center, Av. My Abdellah, Marrakesh - Morocco
                 </a>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-orange-500 shrink-0 mt-0.5" />
                 <a href="https://maps.app.goo.gl/xksoJyDuF1Smvw6P7" target="_blank" rel="noopener noreferrer"
                   className="hover:text-orange-500 text-white/50 underline underline-offset-2">
-                  23 Arset Qortobi, Marrakech
+                 23 Arset Qortobi, 1st Floor, Marrakesh - Morocco
                 </a>
               </div>
             </div>
