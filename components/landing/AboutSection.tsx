@@ -41,7 +41,7 @@ export default function AboutUsSection() {
             About Us
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-5">
-            Built by Builders Who Believe in Science
+            The Story Behind the Platform
           </h2>
         </motion.div>
 
